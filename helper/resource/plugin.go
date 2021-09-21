@@ -43,6 +43,10 @@ func runProviderCommand(t testing.T, f func() error, wd *plugintest.WorkingDir, 
 
 	wd.SetStderr(writer)
 
+	if os.Getenv("TF_LOG_PATH") != "" {
+		wd.SetLogPath(os.Getenv("TF_LOG_PATH"))
+	}
+
 	go tfsdklog.PipeJSONLogs(ctx, "placeholder", reader)
 
 	// this is needed so Terraform doesn't default to expecting protocol 4;

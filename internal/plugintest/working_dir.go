@@ -255,3 +255,7 @@ func (wd *WorkingDir) Schemas() (*tfjson.ProviderSchemas, error) {
 func (wd *WorkingDir) SetStderr(w io.Writer) {
 	wd.tf.SetStderr(w)
 }
+
+func (wd *WorkingDir) SetLogPath(path string) {
+	wd.tf.SetLogPath(path)
+}
