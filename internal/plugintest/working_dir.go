@@ -5,6 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -249,4 +250,8 @@ func (wd *WorkingDir) Refresh() error {
 // If the schemas cannot be read, Schemas returns an error.
 func (wd *WorkingDir) Schemas() (*tfjson.ProviderSchemas, error) {
 	return wd.tf.ProvidersSchema(context.Background())
+}
+
+func (wd *WorkingDir) SetStderr(w io.Writer) {
+	wd.tf.SetStderr(w)
 }

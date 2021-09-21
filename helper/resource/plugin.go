@@ -3,6 +3,7 @@ package resource
 import (
 	"context"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"os"
@@ -13,6 +14,7 @@ import (
 	"github.com/hashicorp/terraform-exec/tfexec"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
+	"github.com/hashicorp/terraform-plugin-log/tfsdklog"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/plugintest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
@@ -36,6 +38,12 @@ func runProviderCommand(t testing.T, f func() error, wd *plugintest.WorkingDir, 
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
+
+	reader, writer := io.Pipe()
+
+	wd.SetStderr(writer)
+
+	go tfsdklog.PipeJSONLogs(ctx, "placeholder", reader)
 
 	// this is needed so Terraform doesn't default to expecting protocol 4;
 	// we're skipping the handshake because Terraform didn't launch the
