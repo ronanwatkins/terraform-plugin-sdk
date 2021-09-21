@@ -1,6 +1,7 @@
 package logging
 
 import (
+	"context"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -10,6 +11,7 @@ import (
 	"syscall"
 
 	"github.com/hashicorp/logutils"
+	"github.com/hashicorp/terraform-plugin-log/tfsdklog"
 	testing "github.com/mitchellh/go-testing-interface"
 )
 
@@ -113,4 +115,10 @@ func isValidLogLevel(level string) bool {
 	}
 
 	return false
+}
+
+func GetTestLogContext() context.Context {
+	ctx := context.Background()
+	ctx = tfsdklog.RegisterSink(ctx)
+	return ctx
 }

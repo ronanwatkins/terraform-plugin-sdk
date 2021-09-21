@@ -93,6 +93,7 @@ func runProviderCommand(t testing.T, f func() error, wd *plugintest.WorkingDir, 
 				Output: ioutil.Discard,
 			}),
 			NoLogOutputOverride: true,
+			UseTFLogSink:        true,
 		}
 
 		// let's actually start the provider server
@@ -170,6 +171,7 @@ func runProviderCommand(t testing.T, f func() error, wd *plugintest.WorkingDir, 
 				Output: ioutil.Discard,
 			}),
 			NoLogOutputOverride: true,
+			UseTFLogSink:        true,
 		}
 
 		// let's actually start the provider server
@@ -244,6 +246,7 @@ func runProviderCommand(t testing.T, f func() error, wd *plugintest.WorkingDir, 
 				Output: ioutil.Discard,
 			}),
 			NoLogOutputOverride: true,
+			UseTFLogSink:        true,
 		}
 
 		// let's actually start the provider server

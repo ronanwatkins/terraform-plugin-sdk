@@ -8,9 +8,9 @@ import (
 	"google.golang.org/grpc"
 
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
-	tf5server "github.com/hashicorp/terraform-plugin-go/tfprotov5/tf5server"
+	"github.com/hashicorp/terraform-plugin-go/tfprotov5/tf5server"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
-	tf6server "github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server"
+	"github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
@@ -55,6 +55,8 @@ type ServeOpts struct {
 	// adapter. This should only be used when running the plugin in
 	// acceptance tests.
 	NoLogOutputOverride bool
+
+	UseTFLogSink bool
 }
 
 // Serve serves a plugin. This function never returns and should be the final
@@ -104,6 +106,9 @@ func Serve(opts *ServeOpts) {
 				},
 			},
 		}
+		if opts.UseTFLogSink {
+			serveConfig.VersionedPlugins[5][ProviderPluginName].(*tf5server.GRPCProviderPlugin).Opts = append(serveConfig.VersionedPlugins[5][ProviderPluginName].(*tf5server.GRPCProviderPlugin).Opts, tf5server.WithLoggingSink())
+		}
 
 	} else if opts.GRPCProviderV6Func != nil {
 		provider := opts.GRPCProviderV6Func()
@@ -115,6 +120,9 @@ func Serve(opts *ServeOpts) {
 					},
 				},
 			},
+		}
+		if opts.UseTFLogSink {
+			serveConfig.VersionedPlugins[6][ProviderPluginName].(*tf6server.GRPCProviderPlugin).Opts = append(serveConfig.VersionedPlugins[6][ProviderPluginName].(*tf6server.GRPCProviderPlugin).Opts, tf6server.WithLoggingSink())
 		}
 
 	}
