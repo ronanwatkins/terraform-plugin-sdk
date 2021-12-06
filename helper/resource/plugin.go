@@ -3,6 +3,7 @@ package resource
 import (
 	"context"
 	"fmt"
+	testing "github.com/mitchellh/go-testing-interface"
 	"io/ioutil"
 	"log"
 	"os"
@@ -16,7 +17,6 @@ import (
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plugintest"
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/plugin"
-	testing "github.com/mitchellh/go-testing-interface"
 )
 
 type providerFactories struct {
