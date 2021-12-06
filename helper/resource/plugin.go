@@ -8,6 +8,7 @@ import (
 	"os"
 	"strings"
 	"sync"
+	"testing"
 
 	"github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/terraform-exec/tfexec"
@@ -16,7 +17,6 @@ import (
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plugintest"
 	"github.com/ronanwatkins/terraform-plugin-sdk/v2/plugin"
-	testing "github.com/mitchellh/go-testing-interface"
 )
 
 type providerFactories struct {
