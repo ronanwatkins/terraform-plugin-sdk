@@ -14,11 +14,11 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
 	"github.com/hashicorp/terraform-plugin-go/tftypes"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/configschema"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/plans/objchange"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/plugin/convert"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/configschema"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plans/objchange"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plugin/convert"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 const newExtraKey = "_new_extra_shim"

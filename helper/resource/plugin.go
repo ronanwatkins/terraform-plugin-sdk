@@ -13,9 +13,9 @@ import (
 	"github.com/hashicorp/terraform-exec/tfexec"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/plugintest"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plugintest"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/plugin"
 	testing "github.com/mitchellh/go-testing-interface"
 )
 

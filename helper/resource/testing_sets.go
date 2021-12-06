@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 
 	"github.com/hashicorp/go-cty/cty"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/configschema"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/configschema"
 )
 
 func TestSetUnknowns(t *testing.T) {

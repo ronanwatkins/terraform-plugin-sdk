@@ -11,7 +11,7 @@ import (
 	tf5server "github.com/hashicorp/terraform-plugin-go/tfprotov5/tf5server"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 	tf6server "github.com/hashicorp/terraform-plugin-go/tfprotov6/tf6server"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/helper/schema"
 )
 
 const (

@@ -7,9 +7,9 @@ import (
 	"github.com/hashicorp/go-cty/cty"
 	ctyjson "github.com/hashicorp/go-cty/cty/json"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/configschema"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/configschema"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 // DiffFromValues takes the current state and desired state as cty.Values and

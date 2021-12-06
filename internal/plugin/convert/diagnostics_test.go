@@ -8,7 +8,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
 	"github.com/hashicorp/terraform-plugin-go/tftypes"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/diag"
 )
 
 func TestDiagnostics(t *testing.T) {

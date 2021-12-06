@@ -15,9 +15,9 @@ import (
 	"github.com/hashicorp/go-cty/cty/msgpack"
 
 	"github.com/hashicorp/terraform-plugin-go/tfprotov5"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/plugin/convert"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/diag"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/plugin/convert"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 // The GRPCProviderServer will directly implement the go protobuf server

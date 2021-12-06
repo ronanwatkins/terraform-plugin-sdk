@@ -5,7 +5,7 @@ import (
 
 	testing "github.com/mitchellh/go-testing-interface"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 // TestResourceDataRaw creates a ResourceData from a raw configuration map.

@@ -10,7 +10,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-cty/cty"
 	"github.com/hashicorp/go-cty/cty/gocty"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 // ResourceData is used to query and set the attributes of a resource.

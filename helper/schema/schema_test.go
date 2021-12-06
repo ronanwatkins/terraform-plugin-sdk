@@ -13,11 +13,11 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-cty/cty"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/diagutils"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/helper/hashcode"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/diag"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/diagutils"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/helper/hashcode"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/terraform"
 )
 
 func TestEnvDefaultFunc(t *testing.T) {
@@ -1886,7 +1886,7 @@ func TestSchemaMap_Diff(t *testing.T) {
 		},
 
 		{
-			Name: "https://github.com/hashicorp/terraform-plugin-sdk/issues/824",
+			Name: "https://github.com/ronanwatkins/terraform-plugin-sdk/issues/824",
 			Schema: map[string]*Schema{
 				"block_device": {
 					Type:     TypeSet,

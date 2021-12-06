@@ -8,8 +8,8 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/addrs"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/addrs"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/configs/hcl2shim"
 )
 
 func TestStateValidate(t *testing.T) {

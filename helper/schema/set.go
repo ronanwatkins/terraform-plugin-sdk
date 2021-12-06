@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/internal/helper/hashcode"
+	"github.com/ronanwatkins/terraform-plugin-sdk/v2/internal/helper/hashcode"
 )
 
 // HashString hashes strings. If you want a Set of strings, this is the
